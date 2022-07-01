@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.snap {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.snap::-webkit-scrollbar {
+    display: none;
+}
+
+.snap>img {
+    scroll-snap-align: center;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.navbarTogglerActive>span:nth-child(1) {
+    @import apply top-[7px];
+    transform: rotate(45deg);
+}
+
+.navbarTogglerActive>span:nth-child(2) {
+    @import apply opacity-0;
+}
+
+.navbarTogglerActive>span:nth-child(3) {
+    @import apply top-[-8px] rotate-[135deg];
+}
+
+input:checked~.dot {
+    @import apply translate-x-full bg-primary;
+}
+
+input:checked~.dot .active {
+    @import apply block;
+}
+
+input:checked~.dot .inactive {
+    @import apply hidden;
+}
+
+input#toggleFour:checked~.box {
+    @import apply bg-primary;
+}
+
+input#toggleFour:checked~.dot {
+    @import apply translate-x-full bg-white;
+}
+
+input#toggleFive:checked~.dot {
+    @import apply translate-x-full bg-white;
+}
+
+input#toggleFive:checked~.dot span {
+    @import apply bg-primary;
+}
+
+input#toggleSix:checked~.dot {
+    @import apply translate-x-full bg-white;
+}
+
+input#toggleEight:checked~.box {
+    @import apply bg-[#EAEEFB];
+}
+
+input#toggleEight:checked~.dot {
+    @import apply bg-primary;
+}
+
+input#toggleEight:checked~.dot span {
+    @import apply border-white bg-primary;
+}
+
+input#toggleNine:checked~.dot span {
+    @import apply bg-white;
+}
+
+input#toggleNine:checked~.dot {
+    @import apply bg-primary;
+}
+
+input:checked~.box {
+    @import apply border-primary;
+}
+
+input#checkboxLabelOne:checked~.box {
+    @import apply border-primary;
+}
+
+input#checkboxLabelOne:checked~.box .dot {
+    @import apply bg-primary;
+}
+
+input#checkboxLabelTwo:checked~.box span {
+    @import apply opacity-100;
+}
+
+input#checkboxLabelThree:checked~.box span {
+    @import apply opacity-100;
+}
+
+input#checkboxLabelFour:checked~.box {
+    @import apply border-primary;
+}
+
+input#checkboxLabelFour:checked~.box span {
+    @import apply bg-primary;
+}
+
+input#checkboxLabelFive:checked~.box {
+    @import apply bg-primary;
+}
+
+.shape-gradient {
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(196, 196, 196, 0) 100%);
+}
